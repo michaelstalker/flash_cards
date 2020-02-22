@@ -1,0 +1,4 @@
+<section>
+  <h1><%= gettext "Welcome to %{name}!", name: "Flash Cards" %></h1>
+  <p>Learn better with spaced repetition.</p>
+</section>

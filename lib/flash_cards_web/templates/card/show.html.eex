@@ -1,0 +1,18 @@
+<h1>Show Card</h1>
+
+<ul>
+
+  <li>
+    <strong>Question:</strong>
+    <%= @card.question %>
+  </li>
+
+  <li>
+    <strong>Answer:</strong>
+    <%= raw(HtmlSanitizeEx.html5(Earmark.as_html!(@card.answer))) %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.card_path(@conn, :edit, @card) %></span>
+<span><%= link "Back", to: Routes.card_path(@conn, :index) %></span>
