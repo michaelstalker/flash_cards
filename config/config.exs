@@ -15,6 +15,7 @@ config :flash_cards, FlashCardsWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "So+GfY6FSGOChN81YMFcyJUbOiPZXko2aLSWFbJ0O/azEWZOa8t1NJoV2UwIUI1+",
   render_errors: [view: FlashCardsWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: FlashCards.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [signing_salt: "kz5fh9XD"]
 
 # Configures Elixir's Logger
