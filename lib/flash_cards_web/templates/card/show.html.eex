@@ -11,4 +11,7 @@
 </div>
 
 <button class="show">Show Answer</button>
-<p><%= link "Back", to: Routes.card_path(@conn, :index) %></p>
+
+<%= if @next_id do %>
+  <p><%= link "Next Question", to: Routes.card_path(@conn, :show, @next_id) %><p>
+<%= end %>

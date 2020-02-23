@@ -13,10 +13,10 @@
       <section class="container">
         <nav role="navigation">
           <ul>
-            <li><%= link("Create card", to: "/cards/new") %></li>
             <li><%= link("View cards", to: "/cards") %></li>
           </ul>
         </nav>
+        <h1>Flash Cards</h1>
       </section>
     </header>
     <main role="main" class="container">

@@ -1,11 +1,9 @@
-<h1>Listing Cards</h1>
+<h1>Cards</h1>
 
 <table>
   <thead>
     <tr>
       <th>Question</th>
-      <th>Answer</th>
-
       <th></th>
     </tr>
   </thead>

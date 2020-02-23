@@ -4,9 +4,16 @@ defmodule FlashCards.Sets do
   """
 
   import Ecto.Query, warn: false
-  alias FlashCards.Repo
 
-  alias FlashCards.Sets.Card
+  alias FlashCards.{Repo, Sets.Card}
+
+  @spec next_card_id(integer()) :: integer() | nil
+  def next_card_id(id) do
+    query = from c in Card, select: c.id
+    ids = Repo.all(query)
+    current_index = Enum.find_index(ids, &(&1 == String.to_integer(id)))
+    Enum.at(ids, current_index + 1)
+  end
 
   @doc """
   Returns the list of cards.

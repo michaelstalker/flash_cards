@@ -28,7 +28,9 @@ defmodule FlashCardsWeb.CardController do
 
   def show(conn, %{"id" => id}) do
     card = Sets.get_card!(id)
-    render(conn, "show.html", card: card)
+    next_id = Sets.next_card_id(id)
+
+    render(conn, "show.html", card: card, next_id: next_id)
   end
 
   def edit(conn, %{"id" => id}) do
