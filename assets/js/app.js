@@ -15,3 +15,10 @@ import "phoenix_html"
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
+
+
+document.querySelector('.show').addEventListener('click', evt => {
+  document.querySelector('.question').classList.add('hidden')
+  document.querySelector('.answer').classList.remove('hidden')
+  evt.target.classList.add('hidden')
+})
