@@ -33,10 +33,8 @@ defmodule FlashCards.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:earmark, "~> 1.4.2"},
       {:ecto_sql, "~> 3.1"},
       {:gettext, "~> 0.11"},
-      {:html_sanitize_ex, "~> 1.0.0"},
       {:jason, "~> 1.0"},
       {:phoenix, "~> 1.4.14"},
       {:phoenix_ecto, "~> 4.0"},

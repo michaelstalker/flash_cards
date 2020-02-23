@@ -9,7 +9,7 @@
 
   <li>
     <strong>Answer:</strong>
-    <%= raw(HtmlSanitizeEx.html5(Earmark.as_html!(@card.answer))) %>
+    <%= @card.answer %>
   </li>
 
 </ul>
